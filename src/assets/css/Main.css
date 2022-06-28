@@ -1,0 +1,50 @@
+.inputFeilds {
+box-sizing: border-box;
+height: 50px;
+background: #F8FBFE;
+border-radius: 50px;
+border: none;
+}
+
+.loginSubmit {
+width: 326px;
+height: 54px;
+background: #304458;
+border-radius: 50px;
+}
+
+.h-100vh {
+    height: 100vh;
+}
+
+.LoginImage {
+    background: #304458;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.fieldGroups {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.fieldGroups::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.fieldGroups::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.fieldGroups::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.fieldGroups::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
