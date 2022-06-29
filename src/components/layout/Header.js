@@ -2,67 +2,97 @@
     * @description      : 
     * @author           : Saif
     * @group            : 
-    * @created          : 26/06/2022 - 17:42:50
+    * @created          : 29/06/2022 - 15:55:07
     * 
     * MODIFICATION LOG
     * - Version         : 1.0.0
-    * - Date            : 26/06/2022
+    * - Date            : 29/06/2022
     * - Author          : Saif
     * - Modification    : 
 **/
 import React from 'react'
-import { useNavigate, Link } from "react-router-dom";
-import logo from '../../assets/images/logo.png'
-import googleIcon from '../../assets/images/google.png'
-import sideImage from '../../assets/images/man.png'
+import { Link, NavLink } from "react-router-dom";
+import Logo from '../../assets/images/logo.png';
+import Flag from '../../assets/images/flag.png'
+import ProfileImage from '../../assets/images/profile.png'
 
 export const Header = () => {
-    let navigate = useNavigate();
-    const handleSubmit = (e) => {
-        // e.preventDefault();
-        //    navigate(`/profile`);
-        localStorage.setItem("token", "12345");
-    }
     return (
-        <section className="d-flex align-items-center h-100vh">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-6">
-                        <div className="loginContent text-center">
-                            <img alt="Logo" src={logo} />
-                            <h1>Login</h1>
-                            <p>Thank you for get back to our panem , lets access out the best recommendation for you.</p>
-                            <button className='inputFeilds px-5'> <img alt="ButtonImage" src={googleIcon} className="mr-3" /> Sign in with your google account</button>
-                        </div>
-                        <form onSubmit={handleSubmit} className="mb-5">
-                            <div className="form-group mt-4">
-                                <label htmlFor="exampleInputEmail1">Email address</label>
-                                <input type="email" className="form-control inputFeilds" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                            </div>
-                            <div className="form-group mt-4">
-                                <label htmlFor="exampleInputPassword1">Password</label>
-                                <input type="password" className="form-control inputFeilds" id="exampleInputPassword1" placeholder="Password" />
-                            </div>
-                            <div className="text-center mt-4">
-                                <button type="submit" className="btn btn-primary loginSubmit">Login</button>
-                            </div>
-                        </form>
-                        <div className='d-flex flex-wrap justify-content-between'>
-                            <div className='linkOptions'>
-                                <Link to="/" className='text-dark'>Forget password ?</Link>
-                            </div>
-                            <div className='linkOptions'>
-                                <Link to="/sign-up" className='text-dark'>Sign up</Link>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='col-md-6 bgLogin'>
-                        <div className='LoginImage'>
-                            <img alt="LoginImage" src={sideImage} className="mw-100" />
+        <div className="container-fluid bgPrimary">
+            <nav className="navbar navbar-expand-lg navbar-light py-0 gap-15" >
+                <div className='logo'>
+                    <Link className="navbar-brand" to="/">
+                        <img src={Logo} alt="Logo" />
+                    </Link>
+                </div>
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                        <li className='px-4'>
+                            <i className="bi bi-search text-light"></i>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link text-light active" aria-current="page" to="#">Home</NavLink>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <NavLink className="nav-link text-light dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Industries
+                            </NavLink>
+                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><NavLink className="dropdown-item" to="#">Action</NavLink></li>
+                                <li><NavLink className="dropdown-item" to="#">Another action</NavLink></li>
+                                <li><hr className="dropdown-divider" /></li>
+                                <li><NavLink className="dropdown-item" to="#">Something else here</NavLink></li>
+                            </ul>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link text-light" to="#" tabindex="-1" aria-disabled="true">Market Place</NavLink  >
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center my-2 my-lg-0 gap-15">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center gap-15">
+                            <li className="nav-item dropdown">
+                                <NavLink className="nav-link text-light dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src={Flag} />
+                                </NavLink>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><NavLink className="dropdown-item" to="#">Action</NavLink></li>
+                                    <li><NavLink className="dropdown-item" to="#">Another action</NavLink></li>
+                                    <li><hr className="dropdown-divider" /></li>
+                                    <li><NavLink className="dropdown-item" to="#">Something else here</NavLink></li>
+                                </ul>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-light" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i className='bi bi-chat'></i>
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-light" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i className='bi bi-bell'></i>
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link text-light" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i className='bi bi-gear'></i>
+                                </NavLink>
+                            </li>
+                        </ul>
+                        <div class="dropdown px-4">
+                            <button class="border-0 bg-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src={ProfileImage} className='profileImage'/>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </nav>
+        </div>
     )
 }

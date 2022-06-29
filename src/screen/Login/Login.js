@@ -21,7 +21,7 @@ export const Login = () => {
     const handleSubmit = (e) => {
         // e.preventDefault();
         //    navigate(`/profile`);
-        localStorage.setItem("token", "12345");
+        localStorage.setItem("token", false);
     }
     return (
         <section className="d-flex align-items-center h-100vh">

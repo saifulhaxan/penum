@@ -15,6 +15,8 @@ import {AuthScreen} from './router/AuthScreen'
 import {HomeScreen} from './router/HomeScreen'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/Main.css'
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 
 function App() { 
   const [abc, setAbc] = useState(false);

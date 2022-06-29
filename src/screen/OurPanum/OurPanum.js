@@ -11,12 +11,11 @@
     * - Modification    : 
 **/
 import React from 'react'
-import {Header} from '../../components/layout/Header'
 
 export const OurPanum = () => {
   return (
     <div>
-      <Header />
+      Hello World
     </div>
   )
 }
