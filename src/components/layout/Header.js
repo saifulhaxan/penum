@@ -18,7 +18,7 @@ import ProfileImage from '../../assets/images/profile.png'
 
 export const Header = () => {
     return (
-        <div className="container-fluid bgPrimary">
+        <div className="container-fluid bgPrimary mb-4">
             <nav className="navbar navbar-expand-lg navbar-light py-0 gap-15" >
                 <div className='logo'>
                     <Link className="navbar-brand" to="/">

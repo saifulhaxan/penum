@@ -16,6 +16,7 @@ import {HomeScreen} from './router/HomeScreen'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/Main.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'antd/dist/antd.css';
 
 
 function App() { 
