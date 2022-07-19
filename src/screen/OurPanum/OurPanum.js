@@ -11,11 +11,9 @@
     * - Modification    : 
 **/
 import React from 'react'
-
+import Posts from '../Posts'
 export const OurPanum = () => {
   return (
-    <div>
-      Hello World
-    </div>
+    <Posts />
   )
 }

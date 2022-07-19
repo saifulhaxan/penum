@@ -22,6 +22,7 @@ import { Header } from '../components/layout/Header'
 import { LeftSidebar } from '../components/sidebar/leftSidebar';
 import { RightSidebar } from '../components/sidebar/rightSidebar';
 
+
 export const HomeScreen = () => {
   return (
     <BrowserRouter>
@@ -43,7 +44,7 @@ export const HomeScreen = () => {
                   <Route path="/profile" element={<Profile />} />
                 </Routes>
               </div>
-              <div className='col-md-3'>
+              <div className='col-md-3'> 
                 <RightSidebar />
               </div>
             </div>
