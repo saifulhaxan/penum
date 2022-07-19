@@ -11,9 +11,24 @@
     * - Modification    : 
 **/
 import React from 'react'
+import {Link} from 'react-router-dom'
+import { MyConnection } from '../connections/MyConnection'
 
 export const RightSidebar = () => {
   return (
-    <div>rightSidebar</div>
+    <div className='rightSideBar'>
+      <div className='d-flex justify-content-between align-items-center flex-wrap flex-md-nowrap'>
+          <div className='titleBox'>
+              <h4 className='mb-0'>My connections</h4>
+          </div>
+          <div className='viewMore'>
+             <Link to="/" className="primaryBtn">See More</Link>
+          </div>
+      </div>
+         {/* connections list  */}
+         <>
+          <MyConnection />
+         </>
+    </div>
   )
 }

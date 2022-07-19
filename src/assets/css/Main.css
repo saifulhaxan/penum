@@ -73,3 +73,13 @@ img.profileImage {
   border-radius: 50px;
   object-fit: cover;
 }
+
+/* right side bar */
+
+.primaryBtn {
+  padding: 9px 25px;
+  background: #F8FBFE;
+  border-radius: 50px;
+  color: #000;
+  font-size: 16px;
+}
